@@ -4,11 +4,14 @@ import java.util.List;
 
 public class Crypto {
 
-    private List<Letter> letterList;
+    private List<Character> letterList;
 
     public Crypto() {
         LetterManager letterManager = new LetterManager();
         this.letterList = letterManager.getLetterList();
+        for (char a : letterList){
+            System.out.println(a);
+        }
     }
 
     public String enCrypt(int shift, String message){
@@ -18,11 +21,11 @@ public class Crypto {
         StringBuilder result = new StringBuilder();
         for (char c : message.toCharArray()){
             char ch = c;
-            for (Letter l : letterList){
-                if (c == l.getLetter()){
-                    for (Letter e : letterList){
-                        if (e.getNumber() == (l.getNumber() + shift) % letterList.size()){
-                            ch = e.getLetter();
+            for (char l : letterList){
+                if (c == l){
+                    for (char e : letterList){
+                        if (e == (l + shift) % letterList.size()){
+                            ch = e;
                             break;
                         }
                     }

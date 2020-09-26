@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
         Crypto crypto = new Crypto();
-        int shift = -245;
+        int shift = 5;
         String str = "abc ABC æøå 123 ,.!=?";
         System.out.println("message: " + str);
         str = crypto.enCrypt(shift, str);
