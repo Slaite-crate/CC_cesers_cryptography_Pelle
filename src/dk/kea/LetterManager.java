@@ -12,6 +12,7 @@ public class LetterManager {
         addLowerCase();
         addUpperCase();
         addLetter(' ');
+        addLetter('\n');
     }
 
     private void addLowerCase(){
