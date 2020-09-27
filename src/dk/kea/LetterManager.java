@@ -1,6 +1,7 @@
 package dk.kea;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class LetterManager {
@@ -13,6 +14,14 @@ public class LetterManager {
         addUpperCase();
         addLetter(' ');
         addLetter('\n');
+        addLetter('?');
+        addLetter(';');
+        addLetter(',');
+        addLetter('.');
+        addLetter('!');
+        addLetter('-');
+        addLetter('_');
+        Collections.shuffle(letterList);
     }
 
     private void addLowerCase(){
