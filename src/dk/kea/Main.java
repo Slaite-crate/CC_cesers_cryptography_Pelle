@@ -3,7 +3,7 @@ package dk.kea;
 public class Main {
 
     public static void main(String[] args) {
-        TextReader tx = new TextReader("C:\\Users\\Pelle\\IdeaProjects\\CC_cesers_cryptography_Pelle\\src\\dk\\kea\\alice.txt");
+        TextReader tx = new TextReader("src/dk/kea/alice.txt");
         Crypto crypto = new Crypto();
         int shift = 25;
         String str = tx.getText();
